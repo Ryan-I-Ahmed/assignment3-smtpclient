@@ -36,7 +36,7 @@ def smtp_client(port=1025, mailserver='127.0.0.1'):
 
     # Send RCPT TO command and handle server response.
     # Fill in start
-    heloCommand = 'RCPT: Ryan@wonderland\r\n'
+    heloCommand = 'RCPT TO: Ryan@wonderland\r\n'
     clientSocket.send(heloCommand.encode())
     recv1 = clientSocket.recv(1024).decode()
     # Fill in end
